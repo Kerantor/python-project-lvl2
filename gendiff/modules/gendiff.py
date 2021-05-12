@@ -10,13 +10,13 @@ def generate_diff(first_file, second_file):
         if i in json1.keys():
             if i in json2.keys():
                 if json1[i] == json2[i]:
-                    result = result + '    ' + i + ':' + str(json1[i]) + '\n'
+                    result = result + '    ' + i + ': ' + str(json1[i]) + '\n'
                 else:
-                    result = result + '  - ' + i + ':' + str(json1[i]) + '\n'
-                    result = result + '  + ' + i + ':' + str(json2[i]) + '\n'
+                    result = result + '  - ' + i + ': ' + str(json1[i]) + '\n'
+                    result = result + '  + ' + i + ': ' + str(json2[i]) + '\n'
             else:
-                result = result + '  - ' + i + ':' + str(json1[i]) + '\n'
+                result = result + '  - ' + i + ': ' + str(json1[i]) + '\n'
         else:
-            result = result + '  + ' + i + ':' + str(json2[i]) + '\n'
+            result = result + '  + ' + i + ': ' + str(json2[i]) + '\n'
     result = result + '}'
     return result
