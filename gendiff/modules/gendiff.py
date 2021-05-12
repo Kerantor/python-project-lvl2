@@ -1,22 +1,16 @@
 import json
+import yaml
+from gendiff.modules.parsing import parse_diff
 
 
 def generate_diff(first_file, second_file):
-    json1 = json.load(open(str(first_file)))
-    json2 = json.load(open(str(second_file)))
-    all_keys = json1.keys() | json2.keys()
-    result = '{' + '\n'
-    for i in sorted(all_keys):
-        if i in json1.keys():
-            if i in json2.keys():
-                if json1[i] == json2[i]:
-                    result = result + '    ' + i + ': ' + str(json1[i]) + '\n'
-                else:
-                    result = result + '  - ' + i + ': ' + str(json1[i]) + '\n'
-                    result = result + '  + ' + i + ': ' + str(json2[i]) + '\n'
-            else:
-                result = result + '  - ' + i + ': ' + str(json1[i]) + '\n'
-        else:
-            result = result + '  + ' + i + ': ' + str(json2[i]) + '\n'
-    result = result + '}'
+    if str(first_file).endswith('.json'):
+        file1 = json.load(open(str(first_file)))
+    elif str(first_file).endswith(('.yaml', '.yml')):
+        file1 = yaml.safe_load(open(str(first_file)))
+    if str(second_file).endswith('.json'):
+        file2 = json.load(open(str(second_file)))
+    elif str(second_file).endswith(('.yaml', '.yml')):
+        file2 = yaml.safe_load(open(str(second_file)))
+    result = parse_diff(file1, file2)
     return result
