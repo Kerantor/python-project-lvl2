@@ -3,7 +3,7 @@ from gendiff.modules.gendiff import generate_diff
 
 
 def test_gendiff():
-    right_answer = json.load(open(str(fixtures.right_answer)))
-    assert generate_diff(
-        fixtures.json1.json, fixtures.json2.json
-    ) == right_answer
+    json1 = "tests/fixtures/json1.json"
+    json2 = "tests/fixtures/json2.json"
+    right_answer = "tests/fixtures/right_answer.json"
+    assert generate_diff(json1, json2) == json.load(open(str(right_answer)))
