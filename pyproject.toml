@@ -8,6 +8,8 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
+pytest = "^6.2.3"
+pytest-cov = "^2.11.1"
 python = "^3.8"
 argparse = "^1.4.0"
 
