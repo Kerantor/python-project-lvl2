@@ -1,16 +1,20 @@
-import json
-import yaml
 from gendiff.modules.parsing import parse_diff
+from gendiff.formatters import FORMATTER
+import yaml
+import json
 
 
-def generate_diff(first_file, second_file):
-    if str(first_file).endswith('.json'):
-        file1 = json.load(open(str(first_file)))
-    elif str(first_file).endswith(('.yaml', '.yml')):
-        file1 = yaml.safe_load(open(str(first_file)))
-    if str(second_file).endswith('.json'):
-        file2 = json.load(open(str(second_file)))
-    elif str(second_file).endswith(('.yaml', '.yml')):
-        file2 = yaml.safe_load(open(str(second_file)))
-    result = parse_diff(file1, file2)
+def extract_data(file):
+    if str(file).endswith('.json'):
+        result = json.load(open(str(file)))
+    elif str(file).endswith(('.yaml', '.yml')):
+        result = yaml.safe_load(open(str(file)))
+    return result
+
+
+def generate_diff(first_file, second_file, output_format='stylish'):
+    file1 = extract_data(first_file)
+    file2 = extract_data(second_file)
+    formatter = FORMATTER[output_format]
+    result = formatter(parse_diff(file1, file2))
     return result

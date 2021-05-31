@@ -1,22 +1,17 @@
-def generate_text(sign, key, value):
-    result = "  {} {}: {}\n".format(sign, key, value)
-    return result
-
-
 def parse_diff(first_file, second_file):
-    all_keys = first_file.keys() | second_file.keys()
-    result = '{' + '\n'
-    for i in sorted(all_keys):
-        if i in first_file.keys():
-            if i in second_file.keys():
-                if first_file[i] == second_file[i]:
-                    result = result + generate_text(' ', i, str(first_file[i]))
-                else:
-                    result = result + generate_text('-', i, str(first_file[i]))
-                    result = result + generate_text('+', i, str(second_file[i]))
-            else:
-                result = result + generate_text('-', i, str(first_file[i]))
+    shared_keys = first_file.keys() & second_file.keys()
+    old_keys = first_file.keys() - second_file.keys()
+    new_keys = second_file.keys() - first_file.keys()
+    result = {}
+    for i in old_keys:
+        result[i] = ('Removed', first_file[i])
+    for i in new_keys:
+        result[i] = ('Added', second_file[i])
+    for i in shared_keys:
+        if first_file[i] == second_file[i]:
+            result[i] = ('Unchanged', first_file[i])
+        elif type(first_file[i]) is dict and type(second_file[i]) is dict:
+            result[i] = ('Nested', parse_diff(first_file[i], second_file[i]))
         else:
-            result = result + generate_text('+', i, str(second_file[i]))
-    result = result + '}'
+            result[i] = ('Changed', (first_file[i], second_file[i]))
     return result
