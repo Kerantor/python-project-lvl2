@@ -10,3 +10,5 @@
 <a href="https://asciinema.org/a/J6xznCyL33ikaVvuGOt3noAF2" target="_blank"><img src="https://asciinema.org/a/J6xznCyL33ikaVvuGOt3noAF2.svg" /></a>
 <br>EXAMPLE FOR TREE JSON-JSON FILES WITH PLAIN FORMAT</br>
 <a href="https://asciinema.org/a/7yCKhRaAdbwKbdayfuPEH2WoD" target="_blank"><img src="https://asciinema.org/a/7yCKhRaAdbwKbdayfuPEH2WoD.svg" /></a>
+<br>EXAMPLE FOR TREE JSON-JSON FILES WITH JSON FORMAT</br>
+<a href="https://asciinema.org/a/CvIs3JPxGLjGEycBIuhViTL0f" target="_blank"><img src="https://asciinema.org/a/CvIs3JPxGLjGEycBIuhViTL0f.svg" /></a>

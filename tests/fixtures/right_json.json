@@ -1,0 +1,107 @@
+{
+    "common": [
+        "Nested",
+        {
+            "follow": [
+                "Added",
+                false
+            ],
+            "setting1": [
+                "Unchanged",
+                "Value 1"
+            ],
+            "setting2": [
+                "Removed",
+                200
+            ],
+            "setting3": [
+                "Changed",
+                [
+                    true,
+                    null
+                ]
+            ],
+            "setting4": [
+                "Added",
+                "blah blah"
+            ],
+            "setting5": [
+                "Added",
+                {
+                    "key5": "value5"
+                }
+            ],
+            "setting6": [
+                "Nested",
+                {
+                    "doge": [
+                        "Nested",
+                        {
+                            "wow": [
+                                "Changed",
+                                [
+                                    "",
+                                    "so much"
+                                ]
+                            ]
+                        }
+                    ],
+                    "key": [
+                        "Unchanged",
+                        "value"
+                    ],
+                    "ops": [
+                        "Added",
+                        "vops"
+                    ]
+                }
+            ]
+        }
+    ],
+    "group1": [
+        "Nested",
+        {
+            "baz": [
+                "Changed",
+                [
+                    "bas",
+                    "bars"
+                ]
+            ],
+            "foo": [
+                "Unchanged",
+                "bar"
+            ],
+            "nest": [
+                "Changed",
+                [
+                    {
+                        "key": "value"
+                    },
+                    "str"
+                ]
+            ]
+        }
+    ],
+    "group2": [
+        "Removed",
+        {
+            "abc": 12345,
+            "deep": {
+                "id": 45
+            }
+        }
+    ],
+    "group3": [
+        "Added",
+        {
+            "deep": {
+                "id": {
+                    "number": 45
+                }
+            },
+            "fee": 100500
+        }
+    ]
+}
+

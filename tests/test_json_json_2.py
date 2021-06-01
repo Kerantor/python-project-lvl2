@@ -1,7 +1,7 @@
 from gendiff.modules.gendiff import generate_diff
 
 
-def test_gendiff():  # noqa: W291
+def test_gendiff():
     json1 = "tests/fixtures/json2-1.json"
     json2 = "tests/fixtures/json2-2.json"
     right_answer = """{

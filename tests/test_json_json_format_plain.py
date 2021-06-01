@@ -1,7 +1,7 @@
 from gendiff.modules.gendiff import generate_diff
 
 
-def test_gendiff():  # noqa: W291
+def test_gendiff():
     json1 = "tests/fixtures/json2-1.json"
     json2 = "tests/fixtures/json2-2.json"
     right_answer = """Property 'common.follow' was added with value: false
@@ -14,5 +14,5 @@ Property 'common.setting6.ops' was added with value: 'vops'
 Property 'group1.baz' was updated. From 'bas' to 'bars'
 Property 'group1.nest' was updated. From [complex value] to 'str'
 Property 'group2' was removed
-Property 'group3' was added with value: [complex value]"""  # noqa: W291
+Property 'group3' was added with value: [complex value]"""
     assert generate_diff(json1, json2, 'plain') == right_answer
