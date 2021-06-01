@@ -15,6 +15,6 @@ def extract_data(file):
 def generate_diff(first_file, second_file, output_format='stylish'):
     file1 = extract_data(first_file)
     file2 = extract_data(second_file)
-    formatter = FORMATTER[output_format]
+    formatter = FORMATTER[str(output_format)]
     result = formatter(parse_diff(file1, file2))
     return result

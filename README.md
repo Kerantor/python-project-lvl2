@@ -8,3 +8,5 @@
 <a href="https://asciinema.org/a/ONYWMN1JrmsP0zUqzG8xz3F4P" target="_blank"><img src="https://asciinema.org/a/ONYWMN1JrmsP0zUqzG8xz3F4P.svg" /></a>
 <br>EXAMPLE FOR TREE JSON-JSON AND JSON-YAML FILES</br>
 <a href="https://asciinema.org/a/J6xznCyL33ikaVvuGOt3noAF2" target="_blank"><img src="https://asciinema.org/a/J6xznCyL33ikaVvuGOt3noAF2.svg" /></a>
+<br>EXAMPLE FOR TREE JSON-JSON FILES WITH PLAIN FORMAT</br>
+<a href="https://asciinema.org/a/7yCKhRaAdbwKbdayfuPEH2WoD" target="_blank"><img src="https://asciinema.org/a/7yCKhRaAdbwKbdayfuPEH2WoD.svg" /></a>
