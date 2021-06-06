@@ -1,3 +1,6 @@
+"""Module of rendering to plain format function."""
+
+
 def convert(value):
     if value is None:
         return 'null'

@@ -1,10 +1,4 @@
-from gendiff.modules.gendiff import generate_diff
-
-
-def test_gendiff():
-    json1 = "tests/fixtures/json2-1.json"
-    yaml2 = "tests/fixtures/yaml2-2.yml"
-    right_answer = """{
+{
     common: {
       + follow: false
         setting1: Value 1
@@ -47,5 +41,4 @@ def test_gendiff():
         }
         fee: 100500
     }
-}"""  # noqa: W291
-    assert generate_diff(json1, yaml2) == right_answer
+}

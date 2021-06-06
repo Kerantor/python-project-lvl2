@@ -1,3 +1,6 @@
+"""Formattes package."""
+
+
 from gendiff.formatters import stylish, plain, json
 
 FORMATTER = {

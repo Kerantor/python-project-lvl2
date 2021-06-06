@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.4"
-description = ""
+version = "0.1.5"
+description = "Program for generate difference between files."
 authors = ["Rustam Isabaev"]
 packages = [
 { include = "gendiff"},

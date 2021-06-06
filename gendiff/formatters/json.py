@@ -1,3 +1,6 @@
+"""Module of rendering to json format function."""
+
+
 import json
 
 

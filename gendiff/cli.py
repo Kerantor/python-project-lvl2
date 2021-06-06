@@ -1,3 +1,6 @@
+"""CLI parser of the 'Difference Generator'."""
+
+
 import argparse
 
 

@@ -1,3 +1,6 @@
+"""Module of generate diff dict."""
+
+
 from gendiff.modules.parsing import parse_diff
 from gendiff.formatters import FORMATTER
 import yaml

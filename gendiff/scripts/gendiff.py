@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+
+
+"""Script of the 'Difference Generator'."""
+
+
 from gendiff.modules import gendiff
 from gendiff import cli
 

@@ -1,3 +1,6 @@
+"""Module of parsing diff in files."""
+
+
 def parse_diff(first_file, second_file):
     shared_keys = first_file.keys() & second_file.keys()
     old_keys = first_file.keys() - second_file.keys()

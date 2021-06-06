@@ -1,3 +1,6 @@
+"""Module of rendering to JSON-like format function."""
+
+
 _SYMBOLS = {
     'Added': '+',
     'Removed': '-',
