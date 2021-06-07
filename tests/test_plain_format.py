@@ -1,7 +1,7 @@
 """Plain format test."""
 
 
-from gendiff.modules.gendiff import generate_diff
+from gendiff.modules import gendiff
 
 
 def test_gendiff():
@@ -10,4 +10,4 @@ def test_gendiff():
     right_answer = open(
         "tests/fixtures/expectations/right_plain.txt"
     )
-    assert generate_diff(json1, json2, 'plain') == right_answer.read()
+    assert gendiff.generate_diff(json1, json2, 'plain') == right_answer.read()
