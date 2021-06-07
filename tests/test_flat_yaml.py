@@ -1,7 +1,7 @@
 """Flat yaml files test."""
 
 
-from gendiff.modules import gendiff
+from gendiff import generate_diff
 
 
 def test_gendiff():
@@ -12,4 +12,4 @@ def test_gendiff():
         mode="r",
         encoding="UTF-8"
     )
-    assert gendiff.generate_diff(json1, json2) == right_answer.read()
+    assert generate_diff.generate_diff(json1, json2) == right_answer.read()

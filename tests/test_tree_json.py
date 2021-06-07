@@ -1,7 +1,7 @@
 """Tree json files test."""
 
 
-from gendiff.modules import gendiff
+from gendiff import generate_diff
 
 
 def test_gendiff():
@@ -10,4 +10,4 @@ def test_gendiff():
     right_answer = open(
         "tests/fixtures/expectations/right_tree.txt"
     )
-    assert gendiff.generate_diff(json1, json2) == right_answer.read()
+    assert generate_diff.generate_diff(json1, json2) == right_answer.read()

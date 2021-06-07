@@ -1,7 +1,7 @@
 """Json format test."""
 
 
-from gendiff.modules import gendiff
+from gendiff import generate_diff
 import json
 
 
@@ -12,7 +12,7 @@ def test_gendiff():
         "tests/fixtures/expectations/right_json.json"
     ))
     assert json.loads(
-        gendiff.generate_diff(
+        generate_diff.generate_diff(
             json1, json2, 'json'
         )
     ) == right_answer
