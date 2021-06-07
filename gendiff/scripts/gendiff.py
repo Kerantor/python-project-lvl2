@@ -4,14 +4,14 @@
 """Script of the 'Difference Generator'."""
 
 
-from gendiff import generate_diff
+from gendiff import gendiff
 from gendiff import cli
 
 
 def main():
     args = cli.parse_args()
     print(
-        generate_diff.generate_diff(
+        gendiff.generate_diff(
             args.first_file,
             args.second_file,
             args.format
