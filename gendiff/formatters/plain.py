@@ -8,6 +8,8 @@ def convert(value):
         return 'true' if value else 'false'
     elif type(value) is dict:
         value = '[complex value]'
+    elif type(value) is int:
+        value = value
     else:
         value = "'{}'".format(value)
     return value
